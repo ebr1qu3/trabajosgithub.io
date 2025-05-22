@@ -1,0 +1,137 @@
+(() => {
+  type Guest = {
+    name: string;
+    id: number;
+    phoneNo: number;
+    address: string;
+    roomNo: number;
+    checkIn: () => void;
+    checkOut: () => void;
+    payBill: () => void;
+    orderFood: () => void;
+    submitFeedback: () => void;
+  };
+
+  const guest1: Guest = {
+    name: "Luis",
+    id: 1,
+    phoneNo: 1234567890,
+    address: "Av. Siempre Viva 742",
+    roomNo: 101,
+    checkIn() { console.log("Check-in"); },
+    checkOut() { console.log("Check-out"); },
+    payBill() { console.log("Pago"); },
+    orderFood() { console.log("Ordenando comida"); },
+    submitFeedback() { console.log("Feedback enviado"); }
+  };
+
+  type Manager = {
+    name: string;
+    id: number;
+    phoneNo: number;
+    location: string;
+    purchaseInventory: () => void;
+    recordComplaints: () => void;
+    manageStaff: () => void;
+  };
+
+  const manager1: Manager = {
+    name: "Carlos",
+    id: 2,
+    phoneNo: 99887766,
+    location: "Edificio A",
+    purchaseInventory() { console.log("Comprando inventario"); },
+    recordComplaints() { console.log("Registrando quejas"); },
+    manageStaff() { console.log("Gestionando personal"); }
+  };
+
+  type Chef = {
+    name: string;
+    id: number;
+    location: string;
+    takeOrders: () => void;
+  };
+
+  const chef1: Chef = {
+    name: "Ramiro",
+    id: 3,
+    location: "Cocina",
+    takeOrders() { console.log("Tomando orden"); }
+  };
+
+  type FoodItem = {
+    id: number;
+    name: string;
+  };
+
+  const food1: FoodItem = {
+    id: 1,
+    name: "Pizza"
+  };
+
+  type Housekeeping = {
+    name: string;
+    id: number;
+    location: string;
+    cleanRoom: () => void;
+  };
+
+  const house1: Housekeeping = {
+    name: "Ana",
+    id: 4,
+    location: "Piso 3",
+    cleanRoom() { console.log("Limpiando"); }
+  };
+
+  type Inventory = {
+    type: string;
+    status: string;
+  };
+
+  const inv1: Inventory = {
+    type: "Alimentos",
+    status: "Disponible"
+  };
+
+  type Receptionist = {
+    name: string;
+    id: number;
+    phoneNo: number;
+    location: string;
+    checkRoomAvailability: () => void;
+    bookRoom: () => void;
+    generateBill: () => void;
+    acceptCustomerFeedback: () => void;
+  };
+
+  const recep1: Receptionist = {
+    name: "Laura",
+    id: 5,
+    phoneNo: 11223344,
+    location: "Lobby",
+    checkRoomAvailability() { console.log("Verificando"); },
+    bookRoom() { console.log("Reservando"); },
+    generateBill() { console.log("Generando factura"); },
+    acceptCustomerFeedback() { console.log("Recibiendo feedback"); }
+  };
+
+  type Room = {
+    roomNo: number;
+    location: string;
+  };
+
+  const room1: Room = {
+    roomNo: 101,
+    location: "Primer piso"
+  };
+
+  type Bill = {
+    billNo: number;
+    guestName: string;
+  };
+
+  const bill1: Bill = {
+    billNo: 1001,
+    guestName: "Luis"
+  };
+})();
